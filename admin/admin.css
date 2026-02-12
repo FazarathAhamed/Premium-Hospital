@@ -1,0 +1,142 @@
+/* ==========================================
+   HealthyLife - Admin Module CSS
+   Theme: Deep Navy + Gold Accent
+   ========================================== */
+
+:root {
+    --admin-primary: #1a1f3d;
+    --admin-primary-light: #2a3050;
+    --admin-accent: #c8a951;
+}
+
+/* Admin-specific stat card colors */
+.stat-card.admin-blue::after {
+    background: linear-gradient(180deg, #3b82f6, #2563eb);
+}
+
+.stat-card.admin-green::after {
+    background: linear-gradient(180deg, #10b981, #059669);
+}
+
+.stat-card.admin-purple::after {
+    background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+}
+
+.stat-card.admin-orange::after {
+    background: linear-gradient(180deg, #f59e0b, #d97706);
+}
+
+.admin-section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-section-title i {
+    color: var(--admin-accent);
+}
+
+/* Quick Actions Grid */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.quick-action-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.quick-action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--admin-accent);
+}
+
+.quick-action-card i {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--admin-primary);
+}
+
+.quick-action-card span {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Admin Table Styles */
+.admin-table-card {
+    margin-bottom: 24px;
+}
+
+.admin-table-card .card-header {
+    background: linear-gradient(135deg, var(--admin-primary), var(--admin-primary-light));
+    color: #fff;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.admin-table-card .card-header h2 {
+    color: #fff;
+}
+
+.admin-table-card .card-header .btn {
+    background: var(--admin-accent);
+    color: var(--admin-primary);
+    font-weight: 700;
+}
+
+/* Search & Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-bar .form-control {
+    max-width: 280px;
+}
+
+.filter-bar .btn {
+    flex-shrink: 0;
+}
+
+/* Admin Forms */
+.admin-form {
+    max-width: 700px;
+}
+
+.admin-form .form-group {
+    margin-bottom: 22px;
+}
+
+/* Responsive admin adjustments */
+@media (max-width: 768px) {
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .filter-bar .form-control {
+        max-width: 100%;
+    }
+}

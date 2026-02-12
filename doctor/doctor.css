@@ -1,0 +1,180 @@
+/* ==========================================
+   HealthyLife - Doctor Module CSS
+   Theme: Teal/Medical Green
+   ========================================== */
+
+:root {
+    --doctor-primary: #0d4f4f;
+    --doctor-primary-light: #1a6b6b;
+    --doctor-accent: #14b8a6;
+}
+
+/* Doctor schedule card */
+.schedule-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--doctor-primary);
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.schedule-card:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateX(4px);
+}
+
+.schedule-info h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.schedule-info .schedule-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.schedule-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.schedule-meta i {
+    color: var(--doctor-accent);
+}
+
+.schedule-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Patient details card */
+.patient-detail-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.patient-detail-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--doctor-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.patient-detail-card h3 i {
+    color: var(--doctor-accent);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+.detail-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Upload form */
+.upload-form {
+    max-width: 600px;
+}
+
+.upload-form .btn-primary {
+    background: var(--doctor-primary);
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.file-input-wrapper input[type=file] {
+    position: absolute;
+    left: -9999px;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-body);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.file-input-label:hover {
+    border-color: var(--doctor-primary);
+    background: rgba(13, 79, 79, 0.03);
+    color: var(--doctor-primary);
+}
+
+.file-input-label i {
+    font-size: 18px;
+}
+
+.file-name {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--color-success);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .schedule-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .schedule-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

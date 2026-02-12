@@ -1,0 +1,157 @@
+/* ==========================================
+   HealthyLife - Patient Module CSS
+   Theme: Deep Blue + Sage Accent
+   ========================================== */
+
+:root {
+    --patient-primary: #1b3a5c;
+    --patient-primary-light: #2a4f7a;
+    --patient-accent: #6bc5a0;
+}
+
+/* Patient welcome card */
+.welcome-card {
+    background: linear-gradient(135deg, var(--patient-primary), var(--patient-primary-light));
+    border-radius: var(--border-radius);
+    padding: 30px;
+    color: #fff;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-card::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(107, 197, 160, 0.15), transparent 70%);
+    top: -60px;
+    right: -40px;
+    border-radius: 50%;
+}
+
+.welcome-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.welcome-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+/* Appointment booking form */
+.booking-form {
+    max-width: 600px;
+}
+
+.booking-form .btn-primary {
+    background: var(--patient-primary);
+}
+
+/* Patient feedback card */
+.feedback-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--patient-primary);
+    transition: var(--transition);
+}
+
+.feedback-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.feedback-card .feedback-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.feedback-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.feedback-card .feedback-date {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.feedback-card .feedback-message {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.feedback-card .feedback-reply {
+    background: #f0fdf4;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #065f46;
+    border-left: 3px solid var(--patient-accent);
+}
+
+.feedback-reply strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Billing card */
+.billing-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    transition: var(--transition);
+}
+
+.billing-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.billing-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.billing-details p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.billing-amount {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--patient-primary);
+}
+
+@media (max-width: 768px) {
+    .welcome-card {
+        padding: 20px;
+    }
+
+    .welcome-card h2 {
+        font-size: 20px;
+    }
+}
