@@ -105,65 +105,12 @@ hospital-system/
 └── README.md
 ```
 
----
-
-## 🚀 Installation
-
-### **Local Setup (XAMPP)**
-
-1. **Clone/Download** this project to `C:\xampp\htdocs\Healthylife`
-
-2. **Start XAMPP** and run Apache + MySQL
-
-3. **Create Database**:
-   - Open phpMyAdmin: `http://localhost/phpmyadmin`
-   - Create database: `healthylife_db`
-   - Import `database/schema.sql`
-   - Import `database/seed.sql`
-
-4. **Configure Database** (if needed):
-   - Edit `config/db.php` and update:
-     ```php
-     define('DB_HOST', 'localhost');
-     define('DB_USER', 'root');
-     define('DB_PASS', '');
-     define('DB_NAME', 'healthylife_db');
-     ```
 
 5. **Access the System**:
    - Homepage: `http://localhost/Healthylife`
    - Login: `http://localhost/Healthylife/auth/login.php`
 
----
 
-### **InfinityFree Hosting Setup**
-
-1. **Upload Files**:
-   - Upload all files via **File Manager** or **FTP**
-   - Place in `htdocs` or your domain root
-
-2. **Create Database**:
-   - Go to **MySQL Databases** in control panel
-   - Create a new database
-   - Import `database/schema.sql` via phpMyAdmin
-   - Import `database/seed.sql`
-
-3. **Update Database Config**:
-   - Edit `config/db.php`:
-     ```php
-     define('DB_HOST', 'sql123.infinityfree.com'); // Your DB host
-     define('DB_USER', 'epiz_12345678');           // Your DB username
-     define('DB_PASS', 'your_password');           // Your DB password
-     define('DB_NAME', 'epiz_12345678_healthylife'); // Your DB name
-     ```
-
-4. **Set Permissions**:
-   - Set `uploads/reports/` folder to **755** or **777**
-
-5. **Access**:
-   - Visit your domain: `https://yourdomain.infinityfreeapp.com`
-
----
 
 ## 👥 Default Login Credentials
 
@@ -201,28 +148,6 @@ All passwords: **`password123`**
 ### **Departments Table**
 - `id`, `name`, `description`
 
----
-
-## 🎨 Design System
-
-### **Color Themes**
-- **Admin**: Deep Navy (`#1a1f3d`) + Gold Accent (`#c8a951`)
-- **Doctor**: Teal (`#0d4f4f`) + Medical Green (`#14b8a6`)
-- **Patient**: Deep Blue (`#1b3a5c`) + Sage (`#6bc5a0`)
-- **Receptionist**: Purple (`#3d1a3d`) + Violet (`#a855f7`)
-
-### **Typography**
-- **Font**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800, 900
-
-### **Components**
-- Stat cards with gradient borders
-- Modal overlays for forms
-- Responsive tables
-- Badge system for status
-- Animated alerts (auto-dismiss)
-
----
 
 ## 📱 Responsive Breakpoints
 
@@ -267,59 +192,20 @@ All passwords: **`password123`**
 - Database stores file path reference
 - Patients can download reports
 
-### **Appointment Workflow**
-1. Patient books appointment → status: `pending`
-2. Admin/Receptionist approves → status: `approved`
-3. Doctor marks complete → status: `completed`
-4. Auto-creates billing record on booking
 
 ### **Feedback System**
 - Patients submit feedback/inquiries
 - Receptionists view and reply
 - Patients see replies in their feedback page
 
----
-
-## 🐛 Troubleshooting
-
-### **Database Connection Error**
-- Check `config/db.php` credentials
-- Ensure MySQL is running
-- Verify database name exists
-
-### **File Upload Not Working**
-- Check `uploads/reports/` folder exists
-- Set folder permissions to 755 or 777
-- Check PHP `upload_max_filesize` in php.ini
-
-### **Session Timeout Too Fast**
-- Edit `config/session.php`
-- Change `$timeout = 1800;` (30 minutes)
-
-### **Blank Page / White Screen**
-- Enable error reporting in `config/db.php`:
-  ```php
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
-  ```
-
----
 
 ## 📄 License
 
-This project is open-source and free to use for educational purposes.
+This project is not open-source and this for assignment purposes.
 
 ---
 
-## 👨‍💻 Developer Notes
 
-- **Clean Code**: Well-commented, student-friendly
-- **No Frameworks**: Pure PHP for learning
-- **Hosting-Friendly**: Works on free hosting (InfinityFree, 000webhost)
-- **Scalable**: Easy to add new features
-- **Modular**: Each role in separate folder
-
----
 
 ## 🎯 Future Enhancements
 
@@ -331,12 +217,6 @@ This project is open-source and free to use for educational purposes.
 - [ ] Export reports to PDF
 - [ ] Calendar view for appointments
 
----
 
-## 📧 Support
-
-For issues or questions, please check the code comments or contact your instructor.
-
----
 
 **Built with ❤️ for students learning web development**
